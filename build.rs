@@ -12,6 +12,7 @@ fn main() {
 
     // Run protoc
     protoc_rust::Codegen::new()
+        .protoc_path(protoc_bin_vendored::protoc_bin_path().unwrap())
         .out_dir(&dest_path.to_str().unwrap())
         .inputs(&[proto_path.join("sparkplug_b.proto").to_str().unwrap()])
         .includes(&[proto_path.to_str().unwrap()])

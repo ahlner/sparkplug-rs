@@ -11,3 +11,4 @@ protobuf = "2.27.1"
 
 [build-dependencies]
 protoc-rust = "2.27.1"
+protoc-bin-vendored = "3"
