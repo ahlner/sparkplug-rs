@@ -11,3 +11,15 @@
 pub use protobuf;
 
 include!(concat!(env!("OUT_DIR"), "/protos/mod.rs"));
+pub use sparkplug_b::*;
+
+#[cfg(test)]
+mod tests {
+
+    #[test]
+    fn test_include() {
+        use crate::Payload;
+        let p = &Payload::new();
+        assert_eq!(0, p.get_timestamp())
+    }
+}
