@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 license = "EPL-2.0"
 readme = "README.md"
+repository = "https://github.com/ahlner/sparkplug-rs"
 
 [dependencies]
 protobuf = "2.27.1"
