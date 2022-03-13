@@ -7,7 +7,7 @@ readme = "README.md"
 repository = "https://github.com/ahlner/sparkplug-rs"
 authors = ["Philipp Ahlner <philipp@ahlner.com>"]
 keywords = ["IoT", "Sparkplug", "protobuf"]
-description = "Generated Code for Sparkplug protobuf"
+description = "Sparkplug protobuf bindings for Rust"
 categories = ["api-bindings", "encoding"]
 publish = true
 
