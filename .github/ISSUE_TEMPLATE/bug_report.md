@@ -17,7 +17,7 @@ Please fill in as much of the template below as you're able.
 ### Version
 
 <!--
-List the versions of all `tracing` crates you are using. The easiest way to get
+List the versions of all `sparkplug-rs` crates you are using. The easiest way to get
 this information is using `cargo-tree`.
 
 `cargo install cargo-tree`
@@ -25,7 +25,7 @@ this information is using `cargo-tree`.
 
 Then:
 
-`cargo tree | grep tracing`
+`cargo tree | grep sparkplug-rs`
 -->
 
 ### Platform
@@ -37,7 +37,7 @@ Output of `uname -a` (UNIX), or version and 32 or 64-bit (Windows)
 ### Crates
 
 <!--
-If known, please specify the affected tracing crates. Otherwise, delete this
+If known, please specify the affected sparkplug-rs crates. Otherwise, delete this
 section.
 -->
 

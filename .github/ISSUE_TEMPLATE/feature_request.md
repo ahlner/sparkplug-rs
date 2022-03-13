@@ -12,7 +12,7 @@ assignees: ''
 ### Crates
 
 <!--
-If known, please specify the tracing crate or crates the new feature should
+If known, please specify the sparkplug-rs crate or crates the new feature should
 be added to. Otherwise, delete this section.
 -->
 
