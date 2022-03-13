@@ -1,3 +1,5 @@
+# v0.2.3 - unreleased
+
 # v0.2.0 - 03-13-2022
 
 - Added abstraction for MQTT topic names 

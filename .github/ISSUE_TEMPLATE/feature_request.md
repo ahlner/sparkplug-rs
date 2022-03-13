@@ -1,20 +1,35 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+name: 💡 Feature Request
+about: I have a suggestion (and may want to implement it 🙂)!
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## Feature Request
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+### Crates
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+<!--
+If known, please specify the tracing crate or crates the new feature should
+be added to. Otherwise, delete this section.
+-->
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+### Motivation
+
+<!--
+Please describe the use case(s) or other motivation for the new feature.
+-->
+
+### Proposal
+
+<!--
+How should the new feature be implemented, and why? Add any considered
+drawbacks.
+-->
+
+### Alternatives
+
+<!--
+Are there other ways to solve this problem that you've considered? What are
+their potential drawbacks? Why was the proposed solution chosen over these
+alternatives?
+-->

@@ -1,38 +1,58 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: 🐛 Bug Report
+about: If something isn't working as expected 🤔.
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Bug Report
+<!--
+Thank you for reporting an issue.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+Please fill in as much of the template below as you're able.
+-->
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+### Version
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+<!--
+List the versions of all `tracing` crates you are using. The easiest way to get
+this information is using `cargo-tree`.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+`cargo install cargo-tree`
+(see install here: https://github.com/sfackler/cargo-tree)
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+Then:
 
-**Additional context**
-Add any other context about the problem here.
+`cargo tree | grep tracing`
+-->
+
+### Platform
+
+<!---
+Output of `uname -a` (UNIX), or version and 32 or 64-bit (Windows)
+-->
+
+### Crates
+
+<!--
+If known, please specify the affected tracing crates. Otherwise, delete this
+section.
+-->
+
+### Description
+
+<!--
+
+Enter your issue details below this comment.
+
+One way to structure the description:
+
+<short summary of the bug>
+
+I tried this code:
+
+<code sample that causes the bug>
+
+I expected to see this happen: <explanation>
+
+Instead, this happened: <explanation>
+-->
