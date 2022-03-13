@@ -10,6 +10,7 @@ keywords = ["IoT", "Sparkplug", "protobuf"]
 description = "Sparkplug protobuf bindings for Rust"
 categories = ["api-bindings", "encoding"]
 publish = true
+homepage = "https://docs.rs/sparkplug-rs/"
 
 [dependencies]
 protobuf = "2.27.1"
