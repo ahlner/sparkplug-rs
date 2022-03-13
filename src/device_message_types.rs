@@ -6,7 +6,7 @@ use std::str::FromStr;
 ///
 /// The string representation for use in MQTT's topic name can produced by [ToString::to_string]
 ///
-/// Example:
+/// # Examples
 /// ```
 /// # use sparkplug_rs::DeviceMessageType;
 /// assert_eq!(DeviceMessageType::DBIRTH.to_string(), "DBIRTH".to_string());
@@ -14,28 +14,28 @@ use std::str::FromStr;
 ///
 /// For conversion from the MQTT's topic representation use [FromStr::from_str]
 ///
-/// Example:
+/// # Examples
 /// ```
 /// # use std::str::FromStr;
 /// # use sparkplug_rs::DeviceMessageType;
 /// assert_eq!(DeviceMessageType::from_str("DBIRTH").unwrap(), DeviceMessageType::DBIRTH);
 /// assert!(DeviceMessageType::from_str("xyz").is_err());
 /// ```
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Clone, PartialEq, PartialOrd)]
 pub enum DeviceMessageType {
     DBIRTH,
     DDEATH,
     DDATA,
-    DCMD
+    DCMD,
 }
 
 impl ToString for DeviceMessageType {
     fn to_string(&self) -> String {
         match self {
             DeviceMessageType::DBIRTH => "DBIRTH".to_string(),
-            DeviceMessageType::DDEATH=> "DDEATH".to_string(),
-            DeviceMessageType::DDATA=> "DDATA".to_string(),
-            DeviceMessageType::DCMD=> "DCMD".to_string()
+            DeviceMessageType::DDEATH => "DDEATH".to_string(),
+            DeviceMessageType::DDATA => "DDATA".to_string(),
+            DeviceMessageType::DCMD => "DCMD".to_string(),
         }
     }
 }
@@ -65,7 +65,7 @@ impl FromStr for DeviceMessageType {
             "DDEATH" => Ok(DeviceMessageType::DDEATH),
             "DDATA" => Ok(DeviceMessageType::DDATA),
             "DCMD" => Ok(DeviceMessageType::DCMD),
-            _ => Err(DeviceMessageTypeParseError)
+            _ => Err(DeviceMessageTypeParseError),
         }
     }
 }

@@ -13,25 +13,26 @@ use std::str::FromStr;
 ///
 /// The MQTT-String representation can be parsed with [FromStr::from_str].
 ///
+/// # Examples
 /// ```
 /// # use std::str::FromStr;
 /// # use sparkplug_rs::TopicNamespace;
 /// assert_eq!(TopicNamespace::from_str("spAv1.0").unwrap(), TopicNamespace::SPAV1_0);
 /// assert!(TopicNamespace::from_str("xyz").is_err());
 /// ```
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Clone, PartialEq, PartialOrd)]
 pub enum TopicNamespace {
     // spAv1.0
     SPAV1_0,
     // spBv1.0
-    SPBV1_0
+    SPBV1_0,
 }
 
 impl ToString for TopicNamespace {
     fn to_string(&self) -> String {
         match self {
             TopicNamespace::SPAV1_0 => "spAv1.0".to_string(),
-            TopicNamespace::SPBV1_0 => "spBv1.0".to_string()
+            TopicNamespace::SPBV1_0 => "spBv1.0".to_string(),
         }
     }
 }
@@ -46,7 +47,7 @@ impl Debug for TopicNamespaceParseError {
 
 impl Display for TopicNamespaceParseError {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        f.write_str("Topic parse error")
+        f.write_str("Error parsing topic's namespace")
     }
 }
 
@@ -59,7 +60,7 @@ impl FromStr for TopicNamespace {
         match s {
             "spAv1.0" => Ok(TopicNamespace::SPAV1_0),
             "spBv1.0" => Ok(TopicNamespace::SPBV1_0),
-            _ => Err(TopicNamespaceParseError)
+            _ => Err(TopicNamespaceParseError),
         }
     }
 }

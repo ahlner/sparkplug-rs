@@ -6,7 +6,7 @@ use std::str::FromStr;
 ///
 /// The string representation for use in MQTT's topic name can produced by [ToString::to_string]
 ///
-/// Example:
+/// # Examples
 /// ```
 /// # use sparkplug_rs::NodeMessageType;
 /// assert_eq!(NodeMessageType::NBIRTH.to_string(), "NBIRTH".to_string());
@@ -14,28 +14,28 @@ use std::str::FromStr;
 ///
 /// For conversion from the MQTT's topic representation use [FromStr::from_str]
 ///
-/// Example:
+/// # Examples
 /// ```
 /// # use std::str::FromStr;
 /// # use sparkplug_rs::NodeMessageType;
 /// assert_eq!(NodeMessageType::from_str("NBIRTH").unwrap(), NodeMessageType::NBIRTH);
 /// assert!(NodeMessageType::from_str("xyz").is_err());
 /// ```
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Clone, PartialEq, PartialOrd)]
 pub enum NodeMessageType {
     NBIRTH,
     NDEATH,
     NDATA,
-    NCMD
+    NCMD,
 }
 
 impl ToString for NodeMessageType {
     fn to_string(&self) -> String {
         match self {
             NodeMessageType::NBIRTH => "NBIRTH".to_string(),
-            NodeMessageType::NDEATH=> "NDEATH".to_string(),
-            NodeMessageType::NDATA=> "NDATA".to_string(),
-            NodeMessageType::NCMD=> "NCMD".to_string()
+            NodeMessageType::NDEATH => "NDEATH".to_string(),
+            NodeMessageType::NDATA => "NDATA".to_string(),
+            NodeMessageType::NCMD => "NCMD".to_string(),
         }
     }
 }
@@ -65,7 +65,7 @@ impl FromStr for NodeMessageType {
             "NDEATH" => Ok(NodeMessageType::NDEATH),
             "NDATA" => Ok(NodeMessageType::NDATA),
             "NCMD" => Ok(NodeMessageType::NCMD),
-            _ => Err(NodeMessageTypeParseError)
+            _ => Err(NodeMessageTypeParseError),
         }
     }
 }
