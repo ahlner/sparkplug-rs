@@ -21,7 +21,7 @@ use std::str::FromStr;
 /// assert_eq!(DeviceMessageType::from_str("DBIRTH").unwrap(), DeviceMessageType::DBIRTH);
 /// assert!(DeviceMessageType::from_str("xyz").is_err());
 /// ```
-#[derive(Debug, Clone, PartialEq, PartialOrd)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum DeviceMessageType {
     DBIRTH,
     DDEATH,

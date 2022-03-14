@@ -21,7 +21,7 @@ use std::str::FromStr;
 /// assert_eq!(NodeMessageType::from_str("NBIRTH").unwrap(), NodeMessageType::NBIRTH);
 /// assert!(NodeMessageType::from_str("xyz").is_err());
 /// ```
-#[derive(Debug, Clone, PartialEq, PartialOrd)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum NodeMessageType {
     NBIRTH,
     NDEATH,

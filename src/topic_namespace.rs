@@ -4,7 +4,7 @@ use std::str::FromStr;
 
 /// Enumerator for Sparkplugs's topic namespace.
 ///
-/// The MQTT-Representation can be creaed with the [ToString::to_string]-method.
+/// The MQTT-Representation can be created with the [ToString::to_string]-method.
 /// ```
 /// # use sparkplug_rs::TopicNamespace;
 /// assert_eq!("spAv1.0".to_string(), TopicNamespace::SPAV1_0.to_string());
@@ -20,11 +20,11 @@ use std::str::FromStr;
 /// assert_eq!(TopicNamespace::from_str("spAv1.0").unwrap(), TopicNamespace::SPAV1_0);
 /// assert!(TopicNamespace::from_str("xyz").is_err());
 /// ```
-#[derive(Debug, Clone, PartialEq, PartialOrd)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum TopicNamespace {
-    // spAv1.0
+    /// Sparkplug Payload Version 1.0a
     SPAV1_0,
-    // spBv1.0
+    /// Sparkplug Payload Version 1.0b
     SPBV1_0,
 }
 

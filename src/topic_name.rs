@@ -47,32 +47,59 @@ use std::str::FromStr;
 /// let topic: TopicName = TopicName::from_str("STATE/scada_host_id").unwrap();
 /// assert_eq!(state, topic);
 /// ```
-#[derive(Debug, Clone, PartialOrd, PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum TopicName {
     /// A message for edge-nodes
     NodeMessage {
+        /// The namespace element of the Topic Namespace is the root element that will define
+        /// both the structure of the remaining namespace elements as well as the encoding used
+        /// for the associated payload data.
         namespace: TopicNamespace,
+
+        /// The group_id element of the Topic Namespace provides for a logical grouping
+        /// of MQTT EoN nodes into the MQTT Server and back out to the consuming MQTT Clients.
         group_id: String,
+
+        /// The message_type element of the Topic Namespace provides an indication as to
+        /// how to handle the MQTT payload of the message.
         node_message_type: NodeMessageType,
+
+        /// The edge_node_id element of the Sparkplug (TM) Topic Namespace uniquely identifies the MQTT EoN node within the infrastructure.
         edge_node_id: String,
     },
 
     /// A message for devices
     DeviceMessage {
+        /// The namespace element of the Topic Namespace is the root element that will define
+        /// both the structure of the remaining namespace elements as well as the encoding used
+        /// for the associated payload data.
         namespace: TopicNamespace,
+
+        /// The group_id element of the Topic Namespace provides for a logical grouping
+        /// of MQTT EoN nodes into the MQTT Server and back out to the consuming MQTT Clients.
         group_id: String,
+
+        /// The message_type element of the Topic Namespace provides an indication as to
+        /// how to handle the MQTT payload of the message.
         device_message_type: DeviceMessageType,
+
+        /// The edge_node_id element of the Sparkplug (TM) Topic Namespace uniquely identifies the MQTT EoN node within the infrastructure.
         edge_node_id: String,
+
+        /// The device_id element of the Sparkplug (TM) Topic Namespace identifies a device attached (physically or logically) to the MQTT EoN node.
         device_id: String,
     },
 
     /// A state message for scada systems
-    StateMessage { scada_host_id: String },
+    StateMessage {
+        /// The id of the SCADA application
+        scada_host_id: String,
+    },
 }
 
 impl TopicName {
     /// Constructs a new [TopicName] of type [TopicName::NodeMessage]
-    pub fn new_node_message(
+    pub const fn new_node_message(
         namespace: TopicNamespace,
         group_id: String,
         node_message_type: NodeMessageType,
@@ -87,7 +114,7 @@ impl TopicName {
     }
 
     /// Constructs a new [TopicName] of type [TopicName::DeviceMessage]
-    pub fn new_device_message(
+    pub const fn new_device_message(
         namespace: TopicNamespace,
         group_id: String,
         device_message_type: DeviceMessageType,
@@ -104,7 +131,7 @@ impl TopicName {
     }
 
     /// Constructs a new [TopicName] of type [TopicName::StateMessage]
-    pub fn new_state_message(scada_host_id: String) -> Self {
+    pub const fn new_state_message(scada_host_id: String) -> Self {
         TopicName::StateMessage { scada_host_id }
     }
 }

@@ -72,12 +72,6 @@ labels:
         # Provide a new name to rename an existing label
       new_name: first-timers-only
 
-# Milestones: define milestones for Issues and Pull Requests
-milestones:
-    - title: milestone-title
-      description: milestone-description
-        # The state of the milestone. Either `open` or `closed`
-      state: open
 
 # Collaborators: give specific users access to this repository.
 # See https://docs.github.com/en/rest/reference/repos#add-a-repository-collaborator for available options
