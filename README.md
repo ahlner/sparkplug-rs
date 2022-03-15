@@ -1,6 +1,10 @@
-# sparkplug-rs
+sparkplug-rs
+![License](https://img.shields.io/crates/l/sparkplug-rs)
+[![Latest Version](https://img.shields.io/crates/v/sparkplug-rs.svg)](https://crates.io/crates/sparkplug-rs)
+[![Documentation](https://docs.rs/sparkplug-rs/badge.svg)](https://docs.rs/sparkplug-rs)
+[![Issues](https://img.shields.io/github/issues/ahlner/sparkplug-rs)](https://github.com/ahlner/sparkplug-rs/issues)
 
-Rust protobuf payload for Sparkplug.
+Rust protobuf payload for Sparkplug&trade;.
 The structs are generated with the protobuf IDL of the [`Eclipse Tahu`] project. For more information
 look at the homepage of the [`Eclipse Sparkplug project`].
 
@@ -10,6 +14,8 @@ look at the homepage of the [`Eclipse Sparkplug project`].
 ## MQTT Topic Names
 
 This crate provides a convenient way to handle MQTT topic names with [TopicName].
+
+[TopicName]: https://docs.rs/sparkplug-rs/latest/sparkplug_rs/enum.TopicName.html
 
 ## Examples
 ```rust

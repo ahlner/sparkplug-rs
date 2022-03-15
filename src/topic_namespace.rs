@@ -2,7 +2,7 @@ use std::error::Error;
 use std::fmt::{Debug, Display, Formatter};
 use std::str::FromStr;
 
-/// Enumerator for Sparkplugs's topic namespace.
+/// Enumerator for Sparkplugs&trade; topic namespace.
 ///
 /// The MQTT-Representation can be created with the [ToString::to_string]-method.
 /// ```

@@ -3,7 +3,7 @@ use std::error::Error;
 use std::fmt::{Debug, Display, Formatter};
 use std::str::FromStr;
 
-/// Rust representation of a sparkplug MQTT topic-name.
+/// Rust representation of a sparkplug&trade; MQTT topic-name.
 ///
 /// The [TopicName] can be one of three possible types:
 /// - [TopicName::NodeMessage] for Edge Nodes

@@ -11,6 +11,7 @@ description = "Sparkplug protobuf bindings for Rust"
 categories = ["api-bindings", "encoding"]
 publish = true
 homepage = "https://docs.rs/sparkplug-rs/"
+rust-version = "1.56.1"
 
 [dependencies]
 protobuf = "2.27.1"
