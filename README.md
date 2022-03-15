@@ -19,6 +19,8 @@ This crate provides a convenient way to handle MQTT topic names with [TopicName]
 
 ## Examples
 ```rust
+# use std::str::FromStr;
+# use sparkplug_rs::{NodeMessageType, TopicName, TopicNamespace};
 let node = TopicName::new_node_message(TopicNamespace::SPBV1_0,
                                        "my_group".to_string(),
                                        NodeMessageType::NBIRTH,

@@ -1,3 +1,7 @@
+# v0.3.3 - 03-15-2022
+
+- docs fixed
+
 # v0.3.2 - 03-15-2022 
 
 - docs updated with (tm)-sign and badges
