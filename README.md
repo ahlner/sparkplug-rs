@@ -3,6 +3,7 @@ sparkplug-rs
 [![Latest Version](https://img.shields.io/crates/v/sparkplug-rs.svg)](https://crates.io/crates/sparkplug-rs)
 [![Documentation](https://docs.rs/sparkplug-rs/badge.svg)](https://docs.rs/sparkplug-rs)
 [![Issues](https://img.shields.io/github/issues/ahlner/sparkplug-rs)](https://github.com/ahlner/sparkplug-rs/issues)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fahlner%2Fsparkplug-rs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fahlner%2Fsparkplug-rs?ref=badge_shield)
 
 Rust protobuf payload for Sparkplug&trade;.
 The structs are generated with the protobuf IDL of the [`Eclipse Tahu`] project. For more information
@@ -32,3 +33,7 @@ assert_eq!(topic, node);
 ```
 
 License: EPL-2.0
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fahlner%2Fsparkplug-rs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fahlner%2Fsparkplug-rs?ref=badge_large)
