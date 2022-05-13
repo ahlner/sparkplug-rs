@@ -23,6 +23,6 @@ mod tests {
     fn test_include() {
         use crate::Payload;
         let p = &Payload::new();
-        assert_eq!(0, p.get_timestamp())
+        assert_eq!(0, p.timestamp())
     }
 }
