@@ -1,3 +1,7 @@
+# v0.4.0 - 05-13-2022
+
+- updated to protobuf 3
+
 # v0.3.3 - 03-15-2022
 
 - docs fixed
