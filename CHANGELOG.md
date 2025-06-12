@@ -1,3 +1,7 @@
+# v0.5.0 - 06-12-2025
+
+Update Protobuf to 3.7.2
+
 # v0.4.0 - 05-13-2022
 
 - updated to protobuf 3
