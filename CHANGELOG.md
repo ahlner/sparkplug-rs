@@ -1,3 +1,8 @@
+# v0.5.1 - 06-12-2025
+
+- Added a section on JSON handling using `protobuf-json-mapping`.
+- Minor formatting adjustments for consistency.
+
 # v0.5.0 - 06-12-2025
 
 Update Protobuf to 3.7.2
