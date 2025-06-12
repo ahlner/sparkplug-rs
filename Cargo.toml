@@ -14,7 +14,7 @@ homepage = "https://docs.rs/sparkplug-rs/"
 rust-version = "1.56.1"
 
 [dependencies]
-protobuf = "3.0.2"
+protobuf = "3.7.2"
 
 [build-dependencies]
-protobuf-codegen = "3.0.2"
+protobuf-codegen = "3.7.2"
